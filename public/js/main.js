@@ -25,7 +25,7 @@ const getInfo = async(event) => {
             const arrData = [data];
 
             city_name.innerText = `${arrData[0].name}, ${arrData[0].sys.country}`;
-            temp_real_val.innerText = arrData[0].main.temp;
+            temp_real_val.innerText = (arrData[0].main.temp/10).toFixed(2);
             const tempMood = arrData[0].weather[0].main;
             console.log(tempMood);
 
